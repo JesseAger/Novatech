@@ -9,6 +9,11 @@
 body{
     background: #080808;
     color: #fff;
+        background-image: url('assets/background/software.jpg');
+        background-size: cover; /* Adjust as needed */
+        filter: brightness(0.3); /* Adjust the value between 0 (darkest) and 1 (normal) */
+        
+      
 }
 #header{
     width: 100%;
@@ -16,6 +21,7 @@ body{
     background-image: url(assets/background/software.jpg);
     background-size: cover;
     background-position: center;
+    background-attachment: fixed;
 }
 .container{
     padding: 10px 10%;
@@ -24,6 +30,11 @@ body{
 nav{
     display: flex;
     align-items: center;
-    justify-content: space-between;
     flex-wrap: wrap;
+}
+
+.logo{
+    width: 200px; /* Set your desired width */
+    height: auto; /* Maintain aspect ratio */
+    display: block;
 }
