@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Executive Improvement Plan</title>
+<link rel="shortcut icon" href="./favicon.ico.webp" type="image/x-icon">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <style>
+        #myDiv{
+            font-size: 16px;
+            font-family: sans-serif;
+            font-weight: bolder;
+            border: 2px solid aqua;
+            padding-left: 200px;
+            padding-right: 400px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            border-radius: 20px;
+            
+           
+        }
+        .sunburst-segment-1{
+            fill:red ;
+            box-sizing: inherit;
+        }
+        img{
+padding: 6px;
+padding-right: 8px;
+padding-bottom: 28px;
+        }
+    
+    .link-icon{
+        border-radius: 50%;
+        display: inline-block;
+        width: 32px;
+        height: 32px;
+    }
+    .link-icon img{
+        width: 100%;
+        height: 100%;
+        object-fit: inherit;
+        border-radius: 50%;
+        opacity: 0.6;
+    }
+    
+    </style>
+</head>
+<body>
+<a href="https://www.canva.com/design/DAF8UANouOY/7c8HQvsJK5n0N9BIVPZ4_g/edit?utm_content=DAF8UANouOY&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" 
+target="_top" 
+onclick="window.open(this.href); return false;" onclick="window.alert('Proceed to Presentation')"><img id="img" src="./alanD.png"/></a>
+    <div id="myDiv"></div>
+
+    <script>
+
+        var data = [{
+        type: "sunburst",
+        labels: ["", "Root Cause analysis", "Immediate Corrective Actions", "Preventive actions", "Problem Statement", 
+        "Lessons learned", "Implementation plans", "Causative<br>Agents", "Primary Causes<br>of Site<br>fatality Outlined<br>and Addressed", "Issues<br>Raised",
+        "Actions<br>Taken <br>", "Planned<br>Actions", "Methods<br>Defined",
+        "Fatality", "Red Card", "Close<br>supervisions<br>and<br>Incident/Accident<br>Report", "Available Emergency<br>and<br>Evacuation Plan", 
+        "Apply<br>Lessons<br>Learned", "Strict<br>Adherence<br>to<br>Planned<br>tasks",
+        "Monitoring and Review", "Frequent<br>Site <br> Inspection<br>by the<br>H&S Officer", "Health and<br>Safety Site<br>Inspections<br>&<br>Audits"],
+
+          parents: ["", "Executive Plan", "Executive Plan", "Executive Plan", "Executive Plan", "Executive Plan",
+        "Executive Plan", "Root Cause analysis", "Root Cause analysis", "Immediate Corrective Actions", 
+        "Immediate Corrective Actions", "Preventive actions", "Preventive actions", "Problem Statement",
+        "Problem Statement", "Lessons learned", "Lessons learned", "Implementation plans", "Implementation plans",
+        "Executive Plan", "Monitoring and Review", "Monitoring and Review"],
+        values:  [null, 1, 1, 1, 1, 1, 1, 15, 15, 15, 14, 14, 14, 14, 14, 16, 16, 14, 14, 14, 14, 14],
+        outsidetextfont: {size: 20, color: "#377eb8"},
+        leaf: {opacity: 0.6},
+        marker: {line: {width: 1}},
+          
+        }];
+        var layout = {
+          margin: {l: 0, r: 0, b: 0, t: 0},
+          width: 800,
+          height: 500
+        };
+        Plotly.newPlot('myDiv', data, layout);
+        
+        Plotly.toHTML('myDiv', {includePlotlyjs: 'cdn', filename: 'sunburst_chart.html'});
+    </script>
+</body>
+</html>

@@ -4,8 +4,46 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        body{
+            background-color: black;
+            color: white;
+            background-image:url(./assets/background/software2.jpg);
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+}
+.but1{
+    padding: 3px;
+    border-radius: 3px;
+    border-style: groove;
+}
+.but1::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #ff004f ;
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    transition: 0.5s;
+}
+.but1:hover::after{
+    width: 100%;
+}
+        
+    </style>
 </head>
+<script>
+    function fnClick(){
+        var x = document.getElementById("paraTest")
+        x.innerHTML = "Welcome to prime Tech"
+    }
+
+</script>
 <body>
-    <h3>Prime Technologies</h3>
+    <h3 id="paraTest">Prime Technologies</h3>
+    <p style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">The website is a property of Jesse Ager</p>
+    <button class="but1" onclick="fnClick()">sign up</button>
 </body>
 </html>

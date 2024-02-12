@@ -76,15 +76,7 @@ nav ul li a:hover::after{
 .header-text h1 span{
 color: #ff004f;
 }
-.about{
-        max-width: 100%; /* Set the maximum width to 100% of its container */
-        max-height: 300px; /* Set the maximum height, adjust as needed */
-        height: auto; /* Maintain the aspect ratio */
-        display: block; /* Remove any extra spacing below the image */
-        margin: 0 auto; /* Center the image horizontally within its container */
-        margin-right: 60%;
-    
-}
+
 .logo{
     width: 140px;
 }
@@ -92,6 +84,9 @@ color: #ff004f;
 #about{
     padding: 80px 0;
     color: #ababab;
+    background-repeat: no-repeat;
+    background-size:contain;
+    
 }
 .row{
     display: flex;
@@ -108,15 +103,7 @@ color: #ff004f;
     flex-basis: 60%;
 
 }
-#about{
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(255, 255, 255, 0.7); /* Adjust the transparency by changing the alpha value (0.7 in this case) */
-}
+
 
 .subtitle{
     font-size: 60px;
